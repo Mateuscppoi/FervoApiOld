@@ -1,18 +1,19 @@
-package br.com.fervo.FervoApp.user;
+package br.com.fervo.FervoApp.dto.user;
 
+import javax.persistence.Entity;
+
+@Entity
 public class UserLoginDTO {
 
     private Long id;
+
+    private Long userId;
 
     private String username;
 
     private String password;
 
-    private UserDTO user;
-
-    public UserLoginDTO(UserDTO user) {
-        this.user = user;
-    }
+    private ConnectionType connectionType;
 
     public Long getId() {
         return id;
@@ -38,7 +39,11 @@ public class UserLoginDTO {
         this.password = password;
     }
 
-    public UserDTO getUser() {
-        return user;
+    public ConnectionType getConnectionType() {
+        return connectionType;
+    }
+
+    public void setConnectionType(ConnectionType connectionType) {
+        this.connectionType = connectionType;
     }
 }
