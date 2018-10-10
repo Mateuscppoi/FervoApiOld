@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface UserProfileRepository extends JpaRepository<ProfileDTO, Long> {
 
+
+
 }

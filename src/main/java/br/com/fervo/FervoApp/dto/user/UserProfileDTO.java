@@ -4,7 +4,7 @@ import br.com.fervo.FervoApp.dto.rewards.UserRewardsDTO;
 
 import java.util.List;
 
-public class UserDTO {
+public class UserProfileDTO {
 
     private ProfileDTO userProfile;
 

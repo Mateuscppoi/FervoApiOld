@@ -1,31 +1,51 @@
 package br.com.fervo.FervoApp.dto.user;
 
-import javax.persistence.Entity;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 public class ProfileDTO {
 
-    private Long Id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
 
+    private Long loginId;
+
+    @Column(name = "message")
     private String message;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "gender")
     private String gender;
 
+    @Column(name = "birth_date")
     private LocalDate birthDate;
 
+    @Column(name = "age")
     private Integer age;
 
+    @Column(name = "nickname")
     private String nickname;
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
+    }
+
+    public Long getLoginId() {
+        return loginId;
+    }
+
+    public void setLoginId(Long loginId) {
+        this.loginId = loginId;
     }
 
     public String getMessage() {

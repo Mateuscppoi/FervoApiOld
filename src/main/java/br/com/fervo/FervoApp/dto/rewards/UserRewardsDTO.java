@@ -3,7 +3,6 @@ package br.com.fervo.FervoApp.dto.rewards;
 import javax.persistence.Entity;
 import java.time.LocalDate;
 
-@Entity
 public class UserRewardsDTO {
 
     private Long id;

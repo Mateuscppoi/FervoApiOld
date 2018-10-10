@@ -1,18 +1,25 @@
 package br.com.fervo.FervoApp.dto.user;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class UserLoginDTO {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    private Long userId;
-
+    @Column(name = "username")
     private String username;
 
+    @Column(name = "password")
     private String password;
 
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "connection_type")
     private ConnectionType connectionType;
 
     public Long getId() {
@@ -37,6 +44,14 @@ public class UserLoginDTO {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public ConnectionType getConnectionType() {
