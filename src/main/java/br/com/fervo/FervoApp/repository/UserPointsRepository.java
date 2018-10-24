@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserPointsRepository  extends JpaRepository<UserPointsDTO, Long> {
 
-    UserPointsDTO findByUser(Long user);
+    UserPointsDTO findByUserId(Long user);
 }

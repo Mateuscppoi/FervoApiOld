@@ -1,9 +1,13 @@
 package br.com.fervo.FervoApp.dto.rewards;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDate;
 
+@Entity
 public class UserPointsDTO {
 
+    @Id
     private Long id;
 
     private Long userId;

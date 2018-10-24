@@ -2,44 +2,33 @@ package br.com.fervo.FervoApp.dto.location;
 
 import org.joda.time.DateTime;
 import org.springframework.data.annotation.Id;
-import org.springframework.format.datetime.joda.JodaTimeContext;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import java.time.LocalDate;
-//import org.springframework.data.mongodb.core.mapping.Document;
-
-//@Document
-@Entity
+@Document
 public class UserLocationDTO {
 
     @Id
-    @Column(name = "ID")
-    private Long id;
+    private String id;
 
-    @Column(name = "USER_ID")
     private Long userId;
 
-    @Column(name = "LATITUDE")
     private String latitude;
 
-    @Column(name = "LONGITUDE")
     private String longitude;
 
-    @Column(name = "CITY")
     private String city;
 
-    @Column(name = "STATE")
     private String state;
 
-    @Column(name = "CREATION_DATE")
+    @Indexed(expireAfterSeconds = 3000)
     private DateTime creationDate;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

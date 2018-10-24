@@ -13,6 +13,6 @@ public interface UserLoginRepository extends JpaRepository<UserLoginDTO, Long> {
 
     UserLoginDTO findFirstById(Integer id);
 
-    @Query(value = GET_LOCATION, nativeQuery = false)
+    @Query(value = GET_LOCATION, nativeQuery = true)
     UserLoginDTO getSeiLa(@Param("cidade") String cidade);
 }
