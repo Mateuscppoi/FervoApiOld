@@ -21,7 +21,7 @@ public class UserLocationDTO {
 
     private String state;
 
-    @Indexed(expireAfterSeconds = 3000)
+    @Indexed(expireAfterSeconds = 300000)
     private DateTime creationDate;
 
     public String getId() {
